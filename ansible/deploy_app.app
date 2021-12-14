@@ -13,3 +13,8 @@
 
     - name: "supervisorctl restart {{program_name}}"
       command: "supervisorctl restart {{program_name}}"
+      
+    - name: create supervisor folder
+      file:
+          path: {{folder_name}}
+          state: directory
